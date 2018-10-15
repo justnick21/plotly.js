@@ -952,6 +952,7 @@ drawing.bBox = function(node, inTester, hash) {
         testNode = node;
     }
     else {
+        if (!drawing.tester) drawing.makeTester();
         tester = drawing.tester.node();
 
         // copy the node to test into the tester
